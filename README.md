@@ -62,10 +62,10 @@ Provide **username and password** with following credentials
 - password: admin123
 # Focus
 The main focus of this application is to demonstrate a simple project setup and usage of Java EE standards and respond to the following requirement:
-	-	Create an application that will send the cash to the employees using the M-Pesa B2C API
-	- Your application does not have to send the cash but at least work in the sandbox environment
-	- As much as possible not to use 3rd party libraries except the ones that come with the
-		programming language of choice
+
+- Create an application that will send the cash to the employees using the M-Pesa B2C API
+- Your application does not have to send the cash but at least work in the sandbox environment
+- As much as possible not to use 3rd party libraries except the ones that come with the programming language of choice
 # Choice of Technology  
 ## WildFly Swarm ( Java EE Microservice)
 That said, why run your Java apps in an application server that has many pieces that aren’t used? By cutting out the fat via WildFly Swarm, 
