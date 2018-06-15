@@ -27,7 +27,7 @@ Example : **upload_folder=/home/awesome/**
 The value /home/awesome/ will represent the location where the csv file will be uploaded. Pay attention to this detail in order to make 
 this application run smoothly
 
-# Starting and runnin the demo on local machine
+# Starting and running the demo on local machine
 
 Go inside the project folder and follow the instruction
 
@@ -36,13 +36,12 @@ Go inside the project folder and follow the instruction
  mvn wildfly-swarm:run 
  
  ```
-
 Open browser and access http://127.0.0.1:8085/
 You will be required to provide _**username and password**_:
 -  username : admin
 -  password : admin123
 
-In addition the customer data is exposed in a JAX-RS resource which is accessible via http://127.0.0.1:8085/index.xhtml.
+> **Note** : To simplify testing the functionalities of the application logs are printed in the console and file so that reviewer can see the execution process. The process of sending payment requests to Mpesa platform is also logged in the console and log file located in 
 
 ## Second Approach
 
@@ -109,4 +108,16 @@ It is a specification to provide a depencency injection container, as in Spring
 ### Bean Validation
 Bean Validation defines a metadata model and API for JavaBean validation. The metadata source is annotations, with the ability to override and extend the meta-data through the use of XML validation descriptors.
 # Source code structure
+| directories | content |
+|--|--|
+| src/main/java |  |
+| src/main/reources |  |
+| src/main/webapp |  |
+
 # Future improvement
+I beleive this demo app can be improved in many area such as:
+
+- Persisting transactions in database or other storage 
+- Since Mpesa Core process request in async mode, it is required to implement as RestFull end point to listen to asynch responses sent back by Mpesa Core System. This mean we can introduce RestFull web service to handle incoming request or implement low level servlet o listen to those incoming response
+- Entreprise Java Bean to handle transactions, security, dependency injection and access control for business objects and many more.
+- If the process of sending those payment need to be automated for periodically execution we can implement Batch Applications which provides the means to run long running background tasks that possibly involve a large volume of data and which may need to be periodically executed

@@ -6,7 +6,7 @@ swarm:
     periodic-rotating-file-handlers:
       FILE:
         file:
-          path: target/desaEm.log
+          path: target/pesaEm.log
         suffix: .yyyy-MM-dd
         named-formatter: LOG_FORMATTER
     root-logger:
