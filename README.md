@@ -47,31 +47,27 @@ In addition the customer data is exposed in a JAX-RS resource which is accessibl
 ## Second Approach
 
 ```
- mvn package && java -jar target/demo-swarm.jar
+mvn package && java -jar target/demo-swarm.jar
+
 ```
 
 # Running the demo online
-Go in your prefered web browser and put this link 
-
+Go in your prefered web browser and put this link :
+```
 http://104.222.96.147:8085/
 
+```
 Provide **username and password** with following credentials
 - username: admin
 - password: admin123
-
-
 # Focus
-
 The main focus of this application is to demonstrate a simple project setup and usage of Java EE standards and respond to the following requirement:
 	-	Create an application that will send the cash to the employees using the M-Pesa B2C API
 	- Your application does not have to send the cash but at least work in the sandbox environment
 	- As much as possible not to use 3rd party libraries except the ones that come with the
 		programming language of choice
-
 # Choice of Technology  
-
 ## WildFly Swarm ( Java EE Microservice)
-
 That said, why run your Java apps in an application server that has many pieces that aren’t used? By cutting out the fat via WildFly Swarm, 
 you get an app and application server combined uber-JAR that sucks up less memory, and is more responsive. Plus, by eliminating unnecessary 
 overhead, they improve security because they reduce your apps’ exposure.
@@ -79,7 +75,6 @@ overhead, they improve security because they reduce your apps’ exposure.
 In short, WildFly Swarm lets you fully embrace all the benefits of a microservices-oriented development and deployment workflow. 
 You no longer have to take a monolithic approach to building and running JavaEE apps. Instead, you can compile and deploy just the parts you need, 
 and leave out everything you don’t.
-
 ## Microservice 
 The concept of microservices is more than a simple novelty. With the advent of DevOps and the boom of container technologies and deployment automation tools, microservices are changing the way developers structure their applications.
 
@@ -103,7 +98,6 @@ Maven’s primary goal is to allow a developer to comprehend the complete state 
 - Providing quality project information
 - Providing guidelines for best practices development
 - Allowing transparent migration to new features
-
 ## Java EE
 I have opted to use Java in this because it is the programming language which I'm familiar with. Having choosen Java as programming language the choice was clear to opt for Java Entreprise Edition (Java EE) components which offers a set of specifications, extending native Java or Java SE with specifications for enterprise features such as distributed computing and web services. Java EE applications are run on reference runtimes, that can be microservices or application servers, which handle transactions, security, scalability, concurrency and management of the components it is deploying
 ### Java Servlet 
@@ -114,6 +108,5 @@ A technology for constructing user interfaces out of components;
 It is a specification to provide a depencency injection container, as in Spring
 ### Bean Validation
 Bean Validation defines a metadata model and API for JavaBean validation. The metadata source is annotations, with the ability to override and extend the meta-data through the use of XML validation descriptors.
-
 # Source code structure
 # Future improvement
