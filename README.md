@@ -22,7 +22,7 @@ It can be built using Maven.
 4. Git
 5. **Another important requirement is to change the upload_folder value located in config.propeties in (src/main/resources)**
 
-Example : __upload_folder=/home/awesome/_
+Example : **upload_folder=/home/awesome/**
 
 The value /home/awesome/ will represent the location where the csv file will be uploaded. Pay attention to this detail in order to make 
 this application run smoothly
@@ -116,3 +116,4 @@ It is a specification to provide a depencency injection container, as in Spring
 Bean Validation defines a metadata model and API for JavaBean validation. The metadata source is annotations, with the ability to override and extend the meta-data through the use of XML validation descriptors.
 
 # Source code structure
+# Future improvement
