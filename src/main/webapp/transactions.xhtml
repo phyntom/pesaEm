@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="templateIn.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="content">
+        <p:separator style="width: 840px"/>
+        <br />
+        <br />
+        <p:dataTable style="font-size: 12px;width:950px;margin: auto"
+                     reflow="true" rows="15" paginator="true" paginatorPosition="bottom"
+                     rowsPerPageTemplate="5,10,15,25,50,75,100"
+                     id="transactiondata" var="trans" value="#{paymentBean.transactionList}">
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="EMPLOYEE NAMES"/>
+                </f:facet>
+                <h:outputText value="#{trans.employeeName}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="PHONE NUMBER"/>
+                </f:facet>
+                <h:outputText value="#{trans.employeePhone}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="AMOUNT"/>
+                </f:facet>
+                <h:outputText value="#{trans.amount}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="TRANSACTION TIME"/>
+                </f:facet>
+                <h:outputText value="#{trans.transactionTime}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="STATUS"/>
+                </f:facet>
+                <h:outputText value="#{trans.responseCode}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="DESCRIPTION"/>
+                </f:facet>
+                <h:outputText value="#{trans.responseDescription}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="CONVERSATION ID"/>
+                </f:facet>
+                <h:outputText value="#{trans.conversationId}"/>
+            </p:column>
+        </p:dataTable>
+        <h:panelGrid style="font-size: 12px;margin: auto" columns="2">
+            <p:commandButton process="@form" value="Back" action="#{paymentBean.back}"/>
+            <p:commandButton  value="Reset" action="#{paymentBean.resetAll}"/>
+            <p:commandButton value="Logout" action="#{userBean.logout}"/>
+        </h:panelGrid>
+    </ui:define>
+</ui:composition>

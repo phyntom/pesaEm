@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="templateIn.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="content">
+        <p:panel header="Upload CSV File" style="font-size: 14px;width: 840px;margin: auto">
+            <p:fileUpload fileUploadListener="#{paymentBean.processFileUpload}" mode="advanced"
+                          dragDropSupport="false"
+                          update=":mainForm:paymentdata,messages" process="@this" sizeLimit="1000000" fileLimit="3"
+                          allowTypes="/(\.|\/)(csv)$/"/>
+            <p:growl id="messages" showDetail="true"/>
+        </p:panel>
+        <p:separator style="width: 840px"/>
+                <p:dataTable style="font-size: 12px;width: 840px;margin: auto"
+                             reflow="true" rows="5" paginator="true" paginatorPosition="bottom"
+                             rowsPerPageTemplate="5,10,15,25,50,75,100"
+                             id="paymentdata" var="emp" value="#{paymentBean.employeeList}">
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="EMPLOYEE NAMES"/>
+                        </f:facet>
+                        <h:outputText value="#{emp.name}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="PHONE NUMBER"/>
+                        </f:facet>
+                        <h:outputText value="#{emp.phoneNumber}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="AMOUNT"/>
+                        </f:facet>
+                        <h:outputText value="#{emp.amount}"/>
+                    </p:column>
+                </p:dataTable>
+            <h:panelGrid style="font-size: 12px;margin: auto" columns="3">
+                <p:commandButton process="@form" value="Send Payment" action="#{paymentBean.processPayment()}"/>
+                <p:commandButton  value="Reset" action="#{paymentBean.resetAll}"/>
+                <p:commandButton value="Logout" action="#{userBean.logout}"/>
+            </h:panelGrid>
+    </ui:define>
+</ui:composition>
