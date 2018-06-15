@@ -78,16 +78,26 @@ The main focus of this application is to demonstrate a simple project setup and 
 		You no longer have to take a monolithic approach to building and running JavaEE apps. Instead, you can compile and deploy just the parts you need, 
 		and leave out everything you don’t.
 ## Microservice 
----The concept of microservices is more than a simple novelty. With the advent of DevOps and the boom of container technologies and deployment automation tools, microservices are changing the way developers structure their applications.
+The concept of microservices is more than a simple novelty. With the advent of DevOps and the boom of container technologies and deployment automation tools, microservices are changing the way developers structure their applications.
 
 The main purpose of a microservice architecture is to break down an application into smaller standalone components that are easier to handle, deploy, scale and maintain in the long term.Encapsulation, cohesion and a good understanding of service-oriented architectures have helped developers apply this “divide and conquer” strategy to software architecture for many years and will do so in the future as well.
 So, what’s the advantage of microservices then:
+
 - Have a small
 - Be cohesive, e.g. focus on a single feature or functionality
 - Expose an interface to be used by other services of the same application or other external services.
+
 Allow independent management, so that it can be coded, tested, deployed and scaled faster.
 Be responsible for handling its own data.
 Be completely isolated from other services, such as no direct dependencies are needed.
 ## Maven
+[Maven](https://maven.apache.org) is a build automation tool used primarily for Java projects. Maven addresses two aspects of building software: first, it describes how software is built, and second, it describes its dependencies
 
+Maven’s primary goal is to allow a developer to comprehend the complete state of a development effort in the shortest period of time. In order to attain this goal there are several areas of concern that Maven attempts to deal with:
+
+- Making the build process easy
+- Providing a uniform build system
+- Providing quality project information
+- Providing guidelines for best practices development
+- Allowing transparent migration to new features
 
