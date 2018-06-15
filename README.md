@@ -67,7 +67,7 @@ The main focus of this application is to demonstrate a simple project setup and 
 	- As much as possible not to use 3rd party libraries except the ones that come with the
 		programming language of choice
 
-# Choice of Technology and 
+# Choice of Technology  
 
 ## WildFly Swarm ( Java EE Microservice)
     That said, why run your Java apps in an application server that has many pieces that aren’t used? By cutting out the fat via WildFly Swarm, 
@@ -100,4 +100,8 @@ Maven’s primary goal is to allow a developer to comprehend the complete state 
 - Providing quality project information
 - Providing guidelines for best practices development
 - Allowing transparent migration to new features
+
+## Java EE
+
+##
 
