@@ -20,16 +20,17 @@ It can be built using Maven.
 2. Maven 3.3.x
 3. IDE (Intellij/Eclipse)
 4. Git
-**Another important requirement is to change the upload_folder value located in config.propeties in (src/main/resources)**
-Example :
-	__upload_folder=/home/awesome/_
-	
+5. **Another important requirement is to change the upload_folder value located in config.propeties in (src/main/resources)**
+
+Example : __upload_folder=/home/awesome/_
+
 The value /home/awesome/ will represent the location where the csv file will be uploaded. Pay attention to this detail in order to make 
 this application run smoothly
 
 # Starting and runnin the demo on local machine
 
 Go inside the project folder and follow the instruction
+
 ## First Approach
 ```
  mvn wildfly-swarm:run 
@@ -70,13 +71,15 @@ The main focus of this application is to demonstrate a simple project setup and 
 # Choice of Technology  
 
 ## WildFly Swarm ( Java EE Microservice)
-    That said, why run your Java apps in an application server that has many pieces that aren’t used? By cutting out the fat via WildFly Swarm, 
-		you get an app and application server combined uber-JAR that sucks up less memory, and is more responsive. Plus, by eliminating unnecessary 
-		overhead, they improve security because they reduce your apps’ exposure.
 
-    In short, WildFly Swarm lets you fully embrace all the benefits of a microservices-oriented development and deployment workflow. 
-		You no longer have to take a monolithic approach to building and running JavaEE apps. Instead, you can compile and deploy just the parts you need, 
-		and leave out everything you don’t.
+That said, why run your Java apps in an application server that has many pieces that aren’t used? By cutting out the fat via WildFly Swarm, 
+you get an app and application server combined uber-JAR that sucks up less memory, and is more responsive. Plus, by eliminating unnecessary 
+overhead, they improve security because they reduce your apps’ exposure.
+
+In short, WildFly Swarm lets you fully embrace all the benefits of a microservices-oriented development and deployment workflow. 
+You no longer have to take a monolithic approach to building and running JavaEE apps. Instead, you can compile and deploy just the parts you need, 
+and leave out everything you don’t.
+
 ## Microservice 
 The concept of microservices is more than a simple novelty. With the advent of DevOps and the boom of container technologies and deployment automation tools, microservices are changing the way developers structure their applications.
 
@@ -102,6 +105,14 @@ Maven’s primary goal is to allow a developer to comprehend the complete state 
 - Allowing transparent migration to new features
 
 ## Java EE
+I have opted to use Java in this because it is the programming language which I'm familiar with. Having choosen Java as programming language the choice was clear to opt for Java Entreprise Edition (Java EE) components which offers a set of specifications, extending native Java or Java SE with specifications for enterprise features such as distributed computing and web services. Java EE applications are run on reference runtimes, that can be microservices or application servers, which handle transactions, security, scalability, concurrency and management of the components it is deploying
+### Java Servlet 
+Defines how to manage HTTP requests, in a synchronous or asynchronous way. It is low level and other Java EE specifications rely on it.
+### Java Server Faces 
+A technology for constructing user interfaces out of components;
+### CDI 
+It is a specification to provide a depencency injection container, as in Spring
+### Bean Validation
+Bean Validation defines a metadata model and API for JavaBean validation. The metadata source is annotations, with the ability to override and extend the meta-data through the use of XML validation descriptors.
 
-##
-
+# Source code structure
