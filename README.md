@@ -42,14 +42,13 @@ You will be required to provide _**username and password**_:
 -  password : admin123
 
 > **Note** : To simplify testing the functionalities of the application logs are printed in the console and file so that reviewer can see the execution process. The process of sending payment requests to Mpesa platform is also logged in the console and log file located in 
-
 ## Second Approach
 
 ```
 mvn package && java -jar target/demo-swarm.jar
 
 ```
-
+> **Note** : To simplify testing the functionalities of the application logs are printed in the console and file so that reviewer can see the execution process. The process of sending payment requests to Mpesa platform is also logged in the console and log file located in 
 # Running the demo online
 Go in your prefered web browser and put this link :
 ```
@@ -113,7 +112,6 @@ Bean Validation defines a metadata model and API for JavaBean validation. The me
 | src/main/java |  |
 | src/main/reources |  |
 | src/main/webapp |  |
-
 # Future improvement
 I beleive this demo app can be improved in many area such as:
 
