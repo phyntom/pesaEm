@@ -20,8 +20,8 @@ For the runtime it uses Wildfly Swarm as container/packaging.
 upload_folder=/home/aimable/
 consumer_key=AcJHVPJGXVGrVkgG3qpMS3eNneKsFlqs
 consumer_secret=KUuN2GESyYWANyEK
-initiator_name=apitest367
-initiator_password=367reset
+initiator_name=testapi
+initiator_password=Safaricom864!
 shortcode=600864
 ```
 > The value **/home/aimable/** should be changed to something like `/home/awesome/` representing your folder location where you want the csv files to be uploaded.  > Do not change the properties keys as those values are read by the applications. Only change property values.
