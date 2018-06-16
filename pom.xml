@@ -91,5 +91,9 @@
             <artifactId>ui-lightness</artifactId>
             <version>1.0.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>logging</artifactId>
+        </dependency>
     </dependencies>
 </project>

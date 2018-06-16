@@ -9,23 +9,22 @@ This application is written in Java and it is based on
 - Wildfly Swarm ()
 
 For the runtime it uses Wildfly Swarm as container/packaging.
-
-The data model of this application consists of two entities: Customer and Note.
-
-It can be built using Maven.
-
 # Requirement to run demo
 
 1. JDK 8
 2. Maven 3.3.x
 3. IDE (Intellij/Eclipse)
 4. Git
-5. **Another important requirement is to change the upload_folder value located in config.propeties in (src/main/resources)**
-
-Example : **upload_folder=/home/awesome/**
-
-The value /home/awesome/ will represent the location where the csv file will be uploaded. Pay attention to this detail in order to make 
-this application run smoothly
+5. **Another important requirement is to change the upload folder location value in the file located in config.propeties in (src/main/resources)**. The content of this file looks as follow: 
+```
+upload_folder=/home/aimable/
+consumer_key=AcJHVPJGXVGrVkgG3qpMS3eNneKsFlqs
+consumer_secret=KUuN2GESyYWANyEK
+initiator_name=apitest367
+initiator_password=367reset
+shortcode=600864
+```
+> The value **/home/aimable/** should be changed to something like `/home/awesome/` representing your folder location where you want the csv files to be uploaded.  > Do not change the properties keys as those values are read by the applications. Only change property values.
 
 # Starting and running the demo on local machine
 
@@ -109,9 +108,9 @@ Bean Validation defines a metadata model and API for JavaBean validation. The me
 # Source code structure
 | directories | content |
 |--|--|
-| src/main/java |  |
-| src/main/reources |  |
-| src/main/webapp |  |
+| src/main/java | contains java classes |
+| src/main/reources | contains project resources files |
+| src/main/webapp | contains web application files such as deployment descriptor, web pages,... |
 # Future improvement
 I beleive this demo app can be improved in many area such as:
 

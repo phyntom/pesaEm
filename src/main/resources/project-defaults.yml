@@ -13,8 +13,7 @@ swarm:
       handlers:
       - CONSOLE
       - FILE
-logger:
-      level: INFO, ERROR
+
 swarm:
   bind:
     address: 0.0.0.0
