@@ -108,6 +108,8 @@ A technology for constructing user interfaces out of components;
 It is a specification to provide a depencency injection container, as in Spring
 ### Bean Validation
 Bean Validation defines a metadata model and API for JavaBean validation. The metadata source is annotations, with the ability to override and extend the meta-data through the use of XML validation descriptors.
+### Java concurrency (MultiThreading)
+Java has been supporting multithreading since JDK 1.0 but with the introduction of JDK 8, the concurrency API has been heavily enhanced by introducing ExecutorService.Executors are capable of running asynchronous tasks and typically manage a pool of threads, so we don't have to create new threads manually. This a needed feature in this demo app since we will sending many payment requests depending on the list of employee submitted. And we want this process to be run on multiple threads and asynchronously.
 # Source code structure
 | directories | content |
 |--|--|
