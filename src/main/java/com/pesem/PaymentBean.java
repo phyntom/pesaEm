@@ -40,8 +40,7 @@ public class PaymentBean implements Serializable {
      * @param event
      */
     public void processFileUpload(FileUploadEvent event) {
-        FacesMessage message = new FacesMessage("File ", event.getFile().getFileName() + " is successfully uploaded.");
-        FacesContext.getCurrentInstance().addMessage(null, message);
+
         employeeList = new ArrayList<>();
         try (InputStream fileInputStream = event.getFile().getInputstream()) {
             /**
@@ -62,9 +61,20 @@ public class PaymentBean implements Serializable {
             filePath = Paths.get(fileLocation);
 //          read the uploaded csv file and load record into list of employee
             employeeList = new CsvFileProcessor().readFileRecord(filePath);
+            FacesMessage message = new FacesMessage("File ", event.getFile().getFileName() + " is successfully uploaded.");
+            FacesContext.getCurrentInstance().addMessage(null, message);
             Log.info("List of employees loaded. Number of records " + employeeList.size());
-        } catch (Exception ex) {
-            Log.error("Cannot copy the file " + event.getFile().getFileName(), ex);
+        }
+
+        catch (FileNotFoundException ex) {
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"File ", event.getFile().getFileName() + " is not uploaded. Invalid upload location");
+            FacesContext.getCurrentInstance().addMessage(null, message);
+            Log.error("Cannot copy the file. Invalid upload location" + event.getFile().getFileName(), ex);
+        }
+        catch (Exception ex) {
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"File ", event.getFile().getFileName() + " is not uploaded.");
+            FacesContext.getCurrentInstance().addMessage(null, message);
+            Log.error("Cannot copy the file " + event.getFile().getFileName(), ex.getCause());
         }
     }
 
