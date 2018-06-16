@@ -13,9 +13,8 @@ For the runtime it uses Wildfly Swarm as container/packaging.
 
 1. JDK 8
 2. Maven 3.3.x
-3. IDE (Intellij/Eclipse)
-4. Git
-5. **Another important requirement is to change the upload folder location value in the file located in config.propeties in (src/main/resources)**. The content of this file looks as follow: 
+3. Git
+4. **Another important requirement is to change the upload folder location value in the file located in config.propeties in (src/main/resources)**. The content of this file looks as follow: 
 ```
 upload_folder=/home/aimable/
 consumer_key=AcJHVPJGXVGrVkgG3qpMS3eNneKsFlqs
@@ -27,7 +26,11 @@ shortcode=600864
 > The value **/home/aimable/** should be changed to something like `/home/awesome/` representing your folder location where you want the csv files to be uploaded.  > Do not change the properties keys as those values are read by the applications. Only change property values.
 
 # Starting and running the demo on local machine
+Use git to clone the project in your prefered folder location.
+```
+git clone https://github.com/phyntom/pesaEm.git
 
+```
 Go inside the project folder and follow the instruction
 
 ## First Approach
