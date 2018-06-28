@@ -4,7 +4,7 @@ This application is written in Java and it is based on
 
 - JSF (Java Server Faces) technology.
 - Bean Validation
-- CDI (Context Dependency Inject)
+- CDI (Context Dependency Injection)
 - Primefaces
 - Wildfly Swarm ()
 
